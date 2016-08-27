@@ -1,29 +1,31 @@
 module.exports = function (app) {
 
-    var conversation = {
+    var conversation = [
 
-	12345: {
+	{
 		speakerID: "Jane",
-		text: "Hello Tarzan"
+		text: "Hello Tarzan",
+		timestamp: "123"
 	},
-
-	123:{
+	{
 		speakerID: "Tarzan",
-		text: "Hello Jane"	
+		text: "Hello Jane",
+		timestamp: "456"
 	}
 
 
-    }
+    ]
 
     app.post('/api/transcription', function (req, res) {
 
         // pass transcription to browser
 	var transcription = req.body
 
-	conversation[transcription.timestamp] = {
+	conversation.push({
 		text: transcription.text,
-		speakerID: transcription.speakerID	
-	}
+		speakerID: transcription.speakerID,
+		timestamp: transcription.timestamp
+	})
 	res.sendStatus(200)
 
     });

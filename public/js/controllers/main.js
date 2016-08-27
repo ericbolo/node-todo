@@ -8,6 +8,7 @@ angular.module('todoController', [])
 		setInterval(function(){
 			$http.get('/api/conversation').then(function(data){
 				console.log(data.data);
+				$scope.conversation = data.data;
 			})
 		}, 1000)
 

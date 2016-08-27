@@ -32,19 +32,9 @@
 	<div class="container">
 
 
-		<!-- TODO LIST -->
-		<div id="todo-list" class="row">
-			<div class="col-sm-4 col-sm-offset-4">
-
-				
-
-				<!-- LOOP OVER THE TODOS IN $scope.todos -->
-				<div ng-repeat="utterance in conversation">
+		<div ng-repeat="utterance in conversation">
 					{{ utterance.transcription }}
 				</div>
-
-			</div>
-		</div>
 
 		
 

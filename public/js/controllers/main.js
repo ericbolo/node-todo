@@ -6,10 +6,7 @@ angular.module('todoController', [])
 		$scope.loading = true;
 
 		setInterval(function(){
-			$http.get('/api/conversation').then(function(err, data){
-				console.log("data"); console.log(data)			
-			});
-		}, 1000)
+		console.log("hello")}, 1000)
 
 		// GET =====================================================================
 		// when landing on the page, get all todos and show them

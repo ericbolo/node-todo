@@ -6,9 +6,8 @@ angular.module('todoController', [])
 		$scope.loading = true;
 
 		setInterval(function(){
-			$http.get('/api/conversation').then(function(err, data){
-				console.log(err);
-				console.log(data);
+			$http.get('/api/conversation').then(function(data){
+				console.log(data.data);
 			})
 		}, 1000)
 

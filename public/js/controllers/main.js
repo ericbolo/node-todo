@@ -5,6 +5,12 @@ angular.module('todoController', [])
 		$scope.formData = {};
 		$scope.loading = true;
 
+		setInterval(function(){
+			$http.get('/api/conversation').then(function(err, data){
+				console.log("data"); console.log(data)			
+			};
+		}, 1000)
+
 		// GET =====================================================================
 		// when landing on the page, get all todos and show them
 		// use the service to get all the todos

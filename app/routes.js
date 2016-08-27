@@ -15,7 +15,6 @@ module.exports = function (app) {
 
     }
 
-    // create todo and send back all todos after creation
     app.post('/api/transcription', function (req, res) {
 
         // pass transcription to browser
@@ -25,6 +24,7 @@ module.exports = function (app) {
 		text: transcription.text,
 		speakerID: transcription.speakerID	
 	}
+	res.sendStatus(200)
 
     });
 
